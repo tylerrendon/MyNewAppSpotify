@@ -4,7 +4,7 @@ const fetchSimilarSongsWithArt = async (lyrics) => {
   try {
     const accessToken = await getValidAccessToken();
     
-    const res = await fetch('http://localhost:4000/get-similar-songs-with-art', {
+    const res = await fetch('mynewappspotify-production.up.railway.app/get-similar-songs-with-art', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lyrics, access_token: accessToken }),
@@ -59,5 +59,6 @@ const searchSong = async (query) => {
     throw error;
   }
 };
+
 export { fetchSimilarSongsWithArt, searchSong };
 export default fetchSimilarSongsWithArt;

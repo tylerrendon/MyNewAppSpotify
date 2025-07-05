@@ -1,5 +1,5 @@
 // spotifyLogin.js
-const redirectUrl = 'http://127.0.0.1:3000/';
+const redirectUrl = process.env.REACT_APP_SPOTIFY_REDIRECT_URI || window.location.origin + '/';
 export const loginWithSpotify = async () => {
   const generateRandomString = (length) => {
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
