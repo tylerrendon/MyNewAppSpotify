@@ -8,7 +8,6 @@ import './Dashboard.css';
 function Dashboard() {
   const [currentSong, setCurrentSong] = useState(null);
   const [similarSongs, setSimilarSongs] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [showSimilar, setShowSimilar] = useState(false);
   const accessToken = localStorage.getItem('access_token');
