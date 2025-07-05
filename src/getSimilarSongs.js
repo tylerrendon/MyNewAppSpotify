@@ -36,7 +36,7 @@ const searchSong = async (query) => {
   try {
     const accessToken = await getValidAccessToken();
     
-    const res = await fetch(`http://localhost:4000/search-song?query=${encodeURIComponent(query)}&access_token=${accessToken}`);
+    const res = await fetch(`mynewappspotify-production.up.railway.app/search-song?query=${encodeURIComponent(query)}&access_token=${accessToken}`);
     
     if (!res.ok) {
       const errorData = await res.json();
