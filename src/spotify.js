@@ -1,6 +1,6 @@
 // spotifyLogin.js
 // TODO: Replace with your actual Vercel URL
-const redirectUrl = 'https://my-new-app-spotify.vercel.app/';
+const redirectUrl = 'https://my-new-app-spotify.vercel.app';
 export const loginWithSpotify = async () => {
   const generateRandomString = (length) => {
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
