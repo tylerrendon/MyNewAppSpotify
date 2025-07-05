@@ -1,5 +1,6 @@
   const clientId = '0fbb5de8f7e24e119fc3693e59f46150';
-  const redirectUrl = process.env.REACT_APP_SPOTIFY_REDIRECT_URI || window.location.origin + '/';
+  // TODO: Replace with your actual Vercel URL
+  const redirectUrl = 'https://my-new-app-spotify.vercel.app/';
   
 export const getToken = async (code) => {
   const codeVerifier = localStorage.getItem('code_verifier')
