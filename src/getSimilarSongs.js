@@ -59,6 +59,5 @@ const searchSong = async (query) => {
     throw error;
   }
 };
-
 export { fetchSimilarSongsWithArt, searchSong };
 export default fetchSimilarSongsWithArt;

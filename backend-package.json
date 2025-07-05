@@ -1,0 +1,21 @@
+{
+  "name": "soulmatch-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "genius-lyrics": "^4.4.7",
+    "node-fetch": "^3.3.2",
+    "openai": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 

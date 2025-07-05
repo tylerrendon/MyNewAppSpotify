@@ -1,6 +1,6 @@
 {
-  "name": "my-new-app",
-  "version": "0.1.0",
+  "name": "soulmatch-app",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -23,10 +23,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "server": "cd src/server && node index.js",
-    "server:dev": "cd src/server && nodemon index.js",
+    "server": "node index.js",
+    "server:dev": "nodemon index.js",
+    "backend": "node index.js",
+    "frontend": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "eslintConfig": {
     "extends": [

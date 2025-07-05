@@ -1,6 +1,6 @@
- const clientId = '0fbb5de8f7e24e119fc3693e59f46150';
+  const clientId = '0fbb5de8f7e24e119fc3693e59f46150';
   const redirectUrl = 'http://127.0.0.1:3000/';
-
+  
 export const getToken = async (code) => {
   const codeVerifier = localStorage.getItem('code_verifier')
   console.log('Retrieved codeVerifier:', codeVerifier);

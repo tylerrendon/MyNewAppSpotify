@@ -6,7 +6,7 @@ import OpenAI from 'openai'
 dotenv.config()
 
 import Genius from "genius-lyrics";
-const Client = new Genius.Client(process.env.GENIUS_ACCESS_TOKEN);//hide this !!!!!!!!
+const Client = new Genius.Client(process.env.GENIUS_ACCESS_TOKEN);
 const openai=new OpenAI({
   apiKey:process.env.OPEN_API_KEY,
 });
@@ -50,6 +50,7 @@ app.get('/get-current-playing',async(req,res)=>{
          res.status(500).json({ error: 'Internal server error' });
       }
 });
+
 app.get('/get-current-lyrics',async (req,res) => {
     const artist=req.query.artist;
     const title=req.query.title;
@@ -62,13 +63,9 @@ app.get('/get-current-lyrics',async (req,res) => {
   }
   const song = searches[0];
   const lyrics = await song.lyrics();
-  
-
 
    return res.json({ lyrics })
 });
-
-
 
 app.get('/search-song', async (req, res) => {
   const { query, access_token } = req.query;
@@ -283,7 +280,8 @@ ${lyrics}`;
 
 // Spotify OAuth configuration
 const SPOTIFY_CLIENT_ID = '0fbb5de8f7e24e119fc3693e59f46150';
-const SPOTIFY_REDIRECT_URI = 'http://127.0.0.1:3000/';
+// This will be updated to your frontend URL after deployment
+const SPOTIFY_REDIRECT_URI = process.env.FRONTEND_URL || 'http://127.0.0.1:3000/';
 
 // Generate PKCE parameters
 const generateRandomString = (length) => {
@@ -366,7 +364,7 @@ app.get('/refresh-token', async (req, res) => {
       return res.status(400).json({ error: 'Refresh token is required' });
     }
     
-    const url = "https://accounts.spotify.com/api/token";
+    const url = "https://api.spotify.com/v1/api/token";
     const payload = {
       method: 'POST',
       headers: {
@@ -422,9 +420,5 @@ app.get('/health', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend server running on http://localhost:${PORT}`);
-});
-
-
-
-
+  console.log(`SoulMatch Backend running on port ${PORT}`);
+}); 
