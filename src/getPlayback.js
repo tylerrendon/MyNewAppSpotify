@@ -4,7 +4,7 @@ const getCurrentPlaying = async () => {
   try {
     const accessToken = await getValidAccessToken();
     
-    const response = await fetch(`mynewappspotify-production.up.railway.app/get-current-playing?access_token=${accessToken}`);
+    const response = await fetch(`https://mynewappspotify-production.up.railway.app/get-current-playing?access_token=${accessToken}`);
     
     if (response.status === 204) {
       return null; // No song playing

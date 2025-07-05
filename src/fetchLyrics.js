@@ -1,5 +1,5 @@
 const getLyrics=async (artist,title) => {
-const res = await fetch(`mynewappspotify-production.up.railway.app/get-current-lyrics?artist=${encodeURIComponent(artist)}&title=${encodeURIComponent(title)}`);
+const res = await fetch(`https://mynewappspotify-production.up.railway.app/get-current-lyrics?artist=${encodeURIComponent(artist)}&title=${encodeURIComponent(title)}`);
 
 if (res.status===204){
     return null;

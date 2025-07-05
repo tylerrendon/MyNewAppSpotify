@@ -1,5 +1,5 @@
   const clientId = '0fbb5de8f7e24e119fc3693e59f46150';
-  const redirectUrl = 'http://127.0.0.1:3000/';
+  const redirectUrl = process.env.REACT_APP_SPOTIFY_REDIRECT_URI || window.location.origin + '/';
   
 export const getToken = async (code) => {
   const codeVerifier = localStorage.getItem('code_verifier')
